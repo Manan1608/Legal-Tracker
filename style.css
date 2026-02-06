@@ -1,0 +1,219 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== Top-left yellow accent ===== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 260px;
+  background: linear-gradient(
+    135deg,
+    #fff36d 0%,
+    rgba(255, 243, 109, 0.6) 55%,
+    transparent 100%
+  );
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  z-index: -1;
+}
+
+/* ===== Hammer with blue circular badge ===== */
+body::after {
+  content: "";
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  width: 120px;
+  height: 120px;
+  background: url("images/hammer.jpg") no-repeat center;
+  background-size: 70%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: -1;
+
+  /* Blue circular rings */
+  box-shadow:
+    0 0 0 4px rgba(30, 115, 190, 0.9),
+    0 0 0 14px rgba(30, 115, 190, 0.18);
+}
+
+
+/* ===== Fixed bottom-left blue circles ===== */
+.decor-circles {
+  position: fixed;
+  bottom: -160px;
+  left: -160px;
+  width: 340px;
+  height: 340px;
+  border: 2px solid rgba(30, 115, 190, 0.25);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.decor-circles::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 260px;
+  height: 260px;
+  border: 2px solid rgba(30, 115, 190, 0.15);
+  border-radius: 50%;
+}
+
+/* ===== Wrapper ===== */
+.wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Dome line ===== */
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px;
+  height: 360px;
+  border: 1px solid rgba(30, 115, 190, 0.25);
+  border-bottom: none;
+  border-radius: 360px 360px 0 0;
+  z-index: 0;
+}
+
+/* ===== Header ===== */
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.page-header span {
+  font-weight: 800;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #ffffff;
+  border: 1px solid #e3e6ea;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #eef1f4;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Text ===== */
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.case-title {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.status-block p {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+/* ===== Image ===== */
+.image-container {
+  margin: 30px 0;
+}
+
+.illustration {
+  width: 280px;
+  max-width: 100%;
+}
+
+/* ===== Info ===== */
+.info-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.info-text em {
+  color: #777;
+}
+
+/* ===== Button ===== */
+.primary-btn {
+  background: #1e73be;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(30, 115, 190, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(30, 115, 190, 0.45);
+}
+
+/* ===== Responsive ===== 
+@media (max-width: 600px) {
+  body::before,
+  body::after,
+  .decor-circles {
+    display: none;
+  }
+
+  .page-header h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 28px 18px;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+}
+   */
+   
+
