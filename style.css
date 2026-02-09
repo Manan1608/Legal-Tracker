@@ -13,66 +13,48 @@ body {
   position: relative;
 }
 
-/* ===== Top-left yellow accent ===== */
-body::before {
-  content: "";
+/* ===== Decorative SVGs ===== */
+.yellow-accent {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 45%;
-  height: 260px;
-  background: linear-gradient(
-    135deg,
-    #fff36d 0%,
-    rgba(255, 243, 109, 0.6) 55%,
-    transparent 100%
-  );
-  clip-path: polygon(0 0, 100% 0, 0 100%);
+  top: -40px;
+  left: -40px;
+  width: 200px;
   z-index: -1;
 }
 
-/* ===== Hammer with blue circular badge ===== */
-body::after {
-  content: "";
+.hammer-wrapper {
   position: fixed;
-  top: 40px;
-  right: 40px;
-  width: 120px;
-  height: 120px;
-  background: url("images/hammer.jpg") no-repeat center;
-  background-size: 70%;
-  background-color: #ffffff;
-  border-radius: 50%;
-  z-index: -1;
-
-  /* Blue circular rings */
-  box-shadow:
-    0 0 0 4px rgba(30, 115, 190, 0.9),
-    0 0 0 14px rgba(30, 115, 190, 0.18);
-}
-
-
-/* ===== Fixed bottom-left blue circles ===== */
-.decor-circles {
-  position: fixed;
-  bottom: -160px;
-  left: -160px;
-  width: 340px;
-  height: 340px;
-  border: 2px solid rgba(30, 115, 190, 0.25);
-  border-radius: 50%;
+  top: 30px;
+  right: 30px;
+  width: 200px;
+  height: 200px;
   z-index: -1;
 }
 
-.decor-circles::after {
-  content: "";
+.blue-rings {
   position: absolute;
-  bottom: 40px;
-  left: 40px;
-  width: 260px;
-  height: 260px;
-  border: 2px solid rgba(30, 115, 190, 0.15);
-  border-radius: 50%;
+  top: -120px;
+  right: -120px;
+  width: 420px;
+  height: 320px;
+}
+
+.hammer-icon {
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  width: 200px;
+}
+
+.bottom-rings {
+  position: fixed;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  z-index: -1;
+
+  transform: scale(-1,-1);
+  transform-origin: center;
 }
 
 /* ===== Wrapper ===== */
@@ -82,10 +64,9 @@ body::after {
   padding: 20px;
   text-align: center;
   position: relative;
-  z-index: 1;
 }
 
-/* ===== Dome line ===== */
+/* ===== Dome outline ===== */
 .wrapper::before {
   content: "";
   position: absolute;
@@ -97,7 +78,7 @@ body::after {
   border: 1px solid rgba(30, 115, 190, 0.25);
   border-bottom: none;
   border-radius: 360px 360px 0 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* ===== Header ===== */
@@ -122,8 +103,6 @@ body::after {
   padding: 40px 30px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   position: relative;
-  z-index: 2;
-  transition: transform 0.3s ease;
 }
 
 .card::before {
@@ -132,11 +111,6 @@ body::after {
   inset: 12px;
   border: 1px solid #eef1f4;
   border-radius: 6px;
-  pointer-events: none;
-}
-
-.card:hover {
-  transform: translateY(-4px);
 }
 
 /* ===== Text ===== */
@@ -155,7 +129,7 @@ body::after {
   margin: 6px 0;
 }
 
-/* ===== Image ===== */
+/* ===== Illustration ===== */
 .image-container {
   margin: 30px 0;
 }
@@ -185,35 +159,11 @@ body::after {
   font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.25s ease;
   box-shadow: 0 8px 20px rgba(30, 115, 190, 0.35);
+  transition: all 0.25s ease;
 }
 
 .primary-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 28px rgba(30, 115, 190, 0.45);
 }
-
-/* ===== Responsive ===== 
-@media (max-width: 600px) {
-  body::before,
-  body::after,
-  .decor-circles {
-    display: none;
-  }
-
-  .page-header h1 {
-    font-size: 22px;
-  }
-
-  .card {
-    padding: 28px 18px;
-  }
-
-  .primary-btn {
-    width: 100%;
-  }
-}
-   */
-   
-
