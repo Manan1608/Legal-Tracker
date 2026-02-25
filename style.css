@@ -1,0 +1,169 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== Decorative SVGs ===== */
+.yellow-accent {
+  position: fixed;
+  top: -40px;
+  left: -40px;
+  width: 200px;
+  z-index: -1;
+}
+
+.hammer-wrapper {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+}
+
+.blue-rings {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 420px;
+  height: 320px;
+}
+
+.hammer-icon {
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  width: 200px;
+}
+
+.bottom-rings {
+  position: fixed;
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  z-index: -1;
+
+  transform: scale(-1,-1);
+  transform-origin: center;
+}
+
+/* ===== Wrapper ===== */
+.wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* ===== Dome outline ===== */
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px;
+  height: 360px;
+  border: 1px solid rgba(30, 115, 190, 0.25);
+  border-bottom: none;
+  border-radius: 360px 360px 0 0;
+  z-index: -1;
+}
+
+/* ===== Header ===== */
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.page-header span {
+  font-weight: 800;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #ffffff;
+  border: 1px solid #e3e6ea;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid #eef1f4;
+  border-radius: 6px;
+}
+
+/* ===== Text ===== */
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.case-title {
+  font-size: 22px;
+  margin: 15px 0;
+}
+
+.status-block p {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+/* ===== Illustration ===== */
+.image-container {
+  margin: 30px 0;
+}
+
+.illustration {
+  width: 280px;
+  max-width: 100%;
+}
+
+/* ===== Info ===== */
+.info-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.info-text em {
+  color: #777;
+}
+
+/* ===== Button ===== */
+.primary-btn {
+  background: #1e73be;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(30, 115, 190, 0.35);
+  transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(30, 115, 190, 0.45);
+}
