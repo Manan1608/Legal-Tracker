@@ -2,6 +2,7 @@ import AppLayout from "../../layout/AppLayout";
 import BagIcon from "../../assets/icons/Bag.svg";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import DateRangePicker from "../../components/DateRangePicker";
 
 /* ─── Calendar Icon ───────────────────────────────────────────── */
 const CalendarIcon = () => (
@@ -220,9 +221,7 @@ export default function CustomerPortal() {
                     className="flex-1 min-w-[250px] h-[46px] border-2 border-[#D0E7FD] rounded-[9px] px-5 outline-none focus:border-[#1E63E9]"
                     placeholder="Search Bar (sap id/ customer name/ SPOC/ Status)"
                 />
-                <select className="min-w-[180px] h-[46px] border-2 border-[#D0E7FD] rounded-[9px] px-4 outline-none">
-                    <option>28 Dec 22 – 10 Jan 23</option>
-                </select>
+                <DateRangePicker className="min-w-[180px] h-[46px] border-2 border-[#D0E7FD] rounded-[9px] px-4 outline-none" />
                 <button
                     onClick={() => navigate("/create-case")}
                     className="h-[46px] px-8 bg-[#17B3A3] text-white border-2 border-[#D0E7FD] rounded-[9px] font-medium hover:bg-[#149C8F] transition"

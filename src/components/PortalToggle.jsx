@@ -11,7 +11,7 @@ const PortalToggle = () => {
 
   const toggleState = () => {
     if (active === "legal") navigate("/customer");
-    else navigate("/");
+    else navigate("/dashboard");
   };
 
   return (
@@ -19,10 +19,10 @@ const PortalToggle = () => {
       {/* --- Legal Portal Tab --- */}
       <div className="relative inline-flex flex-col items-center">
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/dashboard")}
           className={`w-[130px] h-[24px] text-[16px] leading-[100%] tracking-[0%] align-middle flex items-center justify-center rounded-[8px] transition-all duration-300 border-0 outline-none ${active === "legal"
-              ? "bg-[#D0E7FD] text-black"
-              : "text-gray-400 bg-transparent"
+            ? "bg-[#D0E7FD] text-black"
+            : "text-gray-400 bg-transparent"
             }`}
           style={{ fontWeight: 400, fontStyle: 'normal' }}
         >
@@ -54,8 +54,8 @@ const PortalToggle = () => {
         <button
           onClick={() => navigate("/customer")}
           className={`w-[150px] h-[24px] text-[16px] leading-[100%] tracking-[0%] align-middle flex items-center justify-center rounded-[8px] transition-all duration-300 border-0 outline-none ${active === "customer"
-              ? "bg-[#D0E7FD] text-black"
-              : "text-gray-400 bg-transparent"
+            ? "bg-[#D0E7FD] text-black"
+            : "text-gray-400 bg-transparent"
             }`}
           style={{ fontWeight: 400, fontStyle: 'normal' }}
         >
